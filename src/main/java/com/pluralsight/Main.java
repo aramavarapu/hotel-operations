@@ -14,6 +14,12 @@ public class Main {
         System.out.printf("King, 3 nights, weekend: $%.2f a night, $%.2f total%n", king.getPrice(), king.getReservationsTotal());
         Reservation db1 = new Reservation("double", 2 , false);
         System.out.printf("Double, 2 nights, weekday: $%.2f a night, $%.2f total%n", db1.getPrice(),db1.getReservationsTotal());
+
+
+        Employee part = new Employee(1, "Anup", "Housekeeping", 20.00, 20);
+        System.out.printf("%s: %.1f regular, %1f overtime, $%.2f%n", part.getName(), part.getRegularHours(), part.getOvertimeHours(), part.getTotalPay());
+        Employee full = new Employee(2, "JohnPaul", "Front Desk", 20.00, 45);
+        System.out.printf("%s: %.1f regular, %1f overtime, $%.2f%n", full.getName(), full.getRegularHours(), full.getOvertimeHours(), full.getTotalPay());
     }
 
 
