@@ -10,6 +10,15 @@ public class Main {
         System.out.println("Is a dirty room available? " + dirtyRoom.isAvailable());               // false
         System.out.println("Is there a occupied room? " + occupiedRoom.isAvailable());
 
+        Room room = new Room(2, 124.00, false, false);
+        System.out.println("Start: " + room.isAvailable());
+        room.checkIn();
+        System.out.println("After check in: " + room.isAvailable());
+        room.checkOut();
+        System.out.println("After check out: " + room.isAvailable());
+        room.cleanRoom();
+        System.out.println("After cleaning: " + room.isAvailable());
+
         Reservation king = new Reservation("king", 3, true);
         System.out.printf("King, 3 nights, weekend: $%.2f a night, $%.2f total%n", king.getPrice(), king.getReservationsTotal());
         Reservation db1 = new Reservation("double", 2 , false);
