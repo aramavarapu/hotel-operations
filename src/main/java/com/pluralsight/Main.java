@@ -38,6 +38,11 @@ public class Main {
         clock.punchIn();
         clock.punchOut();
         System.out.printf("Punched in and straight out: %.4f hours%n", clock.getHoursWorked());
+
+        Hotel hotel = new Hotel("Lakeside Inn", 2, 10);
+        System.out.println("Book 2 suites: " + hotel.bookRoom(2, true));
+        System.out.println("Book 1 more suite: " + hotel.bookRoom(1, true));
+        System.out.println("Available suites: " + hotel.getAvailableSuites());
     }
 
 
