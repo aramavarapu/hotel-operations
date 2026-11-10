@@ -34,6 +34,10 @@ public class Main {
         time.punchIn(10);
         time.punchOut(14);
         System.out.println("After: " + time.getHoursWorked());
+        Employee clock = new Employee(4, "Kai", "Valet", 20.00, 0);
+        clock.punchIn();
+        clock.punchOut();
+        System.out.printf("Punched in and straight out: %.4f hours%n", clock.getHoursWorked());
     }
 
 
