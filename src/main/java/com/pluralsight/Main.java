@@ -26,9 +26,9 @@ public class Main {
 
 
         Employee part = new Employee(1, "Anup", "Housekeeping", 20.00, 20);
-        System.out.printf("%s: %.1f regular, %1f overtime, $%.2f%n", part.getName(), part.getRegularHours(), part.getOvertimeHours(), part.getTotalPay());
+        System.out.printf("%s: %.1f regular, %.1f overtime, $%.2f%n", part.getName(), part.getRegularHours(), part.getOvertimeHours(), part.getTotalPay());
         Employee full = new Employee(2, "JohnPaul", "Front Desk", 20.00, 45);
-        System.out.printf("%s: %.1f regular, %1f overtime, $%.2f%n", full.getName(), full.getRegularHours(), full.getOvertimeHours(), full.getTotalPay());
+        System.out.printf("%s: %.1f regular, %.1f overtime, $%.2f%n", full.getName(), full.getRegularHours(), full.getOvertimeHours(), full.getTotalPay());
         Employee time = new Employee(3, "Gary", "Bartender", 20.00, 0);
         System.out.println("Before: " + time.getHoursWorked());
         time.punchIn(10);
