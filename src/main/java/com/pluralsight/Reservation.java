@@ -47,7 +47,7 @@ public class Reservation {
         }
         return  price;
     }
-    public double getReservationsTotal() {
+    public double getReservationTotal() {
         return getPrice() * numberOfNights;
     }
 }

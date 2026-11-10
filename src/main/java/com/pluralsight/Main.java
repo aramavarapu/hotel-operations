@@ -20,9 +20,9 @@ public class Main {
         System.out.println("After cleaning: " + room.isAvailable());
 
         Reservation king = new Reservation("king", 3, true);
-        System.out.printf("King, 3 nights, weekend: $%.2f a night, $%.2f total%n", king.getPrice(), king.getReservationsTotal());
+        System.out.printf("King, 3 nights, weekend: $%.2f a night, $%.2f total%n", king.getPrice(), king.getReservationTotal());
         Reservation db1 = new Reservation("double", 2 , false);
-        System.out.printf("Double, 2 nights, weekday: $%.2f a night, $%.2f total%n", db1.getPrice(),db1.getReservationsTotal());
+        System.out.printf("Double, 2 nights, weekday: $%.2f a night, $%.2f total%n", db1.getPrice(),db1.getReservationTotal());
 
 
         Employee part = new Employee(1, "Anup", "Housekeeping", 20.00, 20);
