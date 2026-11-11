@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RoomTest {
 
     @Test
-    public void checkIn() {
+    public void checkIn_should_markRoomOccupiedAndDirty() {
         Room room = new Room(2, 77.00, false, false);
         room.checkIn();
         assertTrue(room.isOccupied());
@@ -14,7 +14,7 @@ class RoomTest {
     }
 
     @Test
-    public void checkOut() {
+    public void checkOut_should_markRoomUnoccupiedAndDirty() {
         Room room = new Room(2, 77.00, true, true);
         room.checkOut();
         assertFalse(room.isOccupied());
@@ -23,7 +23,7 @@ class RoomTest {
     }
 
     @Test
-    public void cleanRoom() {
+    public void cleanRoom_should_markRoomAvailable() {
         Room room = new Room(2, 77.00, false, true);
         room.cleanRoom();
         assertFalse(room.isDirty());
@@ -31,14 +31,14 @@ class RoomTest {
     }
 
     @Test
-    public void checkInDirtyRoomDoesNothing() {
+    public void checkIn_should_doNothing_whenRoomIsDirty() {
         Room room = new Room(2, 77.00, false, true);
         room.checkIn();
         assertFalse(room.isOccupied());
     }
 
     @Test
-    public void checkInOccupiedRoomDoesNothing() {
+    public void checkIn_should_doNothing_whenRoomIsOccupied() {
         Room room = new Room(2, 124.00, true, false);
         room.checkIn();
         assertTrue(room.isOccupied());

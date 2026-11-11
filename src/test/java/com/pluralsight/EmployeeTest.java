@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EmployeeTest {
 
     @Test
-    void punchInExpectFourHours() {
+    void punchOut_should_addFourHours_whenPunchedInAt10AndOutAt14() {
         Employee employee = new Employee(1, "Anup", "Housekeeping", 20.00, 0);
         double expectedHours = 4;
         employee.punchIn(10);
@@ -17,7 +17,7 @@ class EmployeeTest {
     }
 
     @Test
-    void punchInExpectTenHours() {
+    void punchOut_should_addToExistingHours_whenEmployeeAlreadyHasHours() {
         Employee employee = new Employee(1, "Anup", "Housekeeping", 20.00, 8);
         double expectedHours = 10;
         employee.punchIn(13);
