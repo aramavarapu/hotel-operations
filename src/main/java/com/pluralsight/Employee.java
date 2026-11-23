@@ -63,6 +63,6 @@ public class Employee {
 
     public void punchOut() {
         LocalDateTime now = LocalDateTime.now();
-        hoursWorked = (now.getHour() + now.getMinute() / 60.0) - startTime;
+        hoursWorked += (now.getHour() + now.getMinute() / 60.0) - startTime;
     }
     }
